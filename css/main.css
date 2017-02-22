@@ -14,12 +14,58 @@ nav {
   left: 0;
   z-index: 1000; }
   nav div {
-    display: flex; }
+    display: flex;
+    border-bottom: 1px solid #E5E5E5; }
+    nav div div {
+      border: none; }
   nav ul {
+    display: flex;
     margin: 0;
     list-style: none; }
     nav ul li {
-      display: inline; }
+      display: inline-flex; }
+  nav .company-nav {
+    line-height: 39px;
+    margin: 0;
+    padding: 0; }
+    nav .company-nav li {
+      box-sizing: border-box;
+      border-right: 1px solid #E5E5E5;
+      margin: 0;
+      height: 40px;
+      padding-left: 29px;
+      padding-right: 29px; }
+  nav .nav-top {
+    justify-content: space-between; }
+  nav .nike-logo {
+    width: 58px;
+    height: 68px;
+    background-image: url("../img/nike-icon.png");
+    background-size: cover; }
+  nav .jumpman-logo {
+    width: 79px;
+    background-image: url("../img/jumpman-logo.png");
+    background-size: 21px 21px;
+    background-repeat: no-repeat;
+    background-position: center; }
+    nav .jumpman-logo:hover {
+      background-image: url("../img/jumpman-logo-red.png"); }
+  nav .hurley-logo {
+    width: 106px;
+    background-image: url("../img/hurley-logo-light.jpg");
+    background-size: 54px;
+    background-repeat: no-repeat;
+    background-position: center; }
+    nav .hurley-logo:hover {
+      background-image: url("../img/hurley-logo.jpg"); }
+  nav .converse-logo {
+    width: 106px;
+    background-image: url("../img/converse-logo-light.png");
+    background-size: 62px;
+    background-repeat: no-repeat;
+    background-position: center; }
+    nav .converse-logo:hover {
+      background-image: url("../img/converse-logo.png"); }
 
 body {
   padding: 0;
