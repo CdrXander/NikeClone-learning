@@ -40,32 +40,32 @@ nav {
   nav .nike-logo {
     width: 58px;
     height: 68px;
-    background-image: url("../img/nike-icon.png");
+    background-image: url("../img/logos/nike-icon.png");
     background-size: cover; }
   nav .jumpman-logo {
     width: 79px;
-    background-image: url("../img/jumpman-logo.png");
+    background-image: url("../img/logos/jumpman-logo.png");
     background-size: 21px 21px;
     background-repeat: no-repeat;
     background-position: center; }
     nav .jumpman-logo:hover {
-      background-image: url("../img/jumpman-logo-red.png"); }
+      background-image: url("../img/logos/jumpman-logo-red.png"); }
   nav .hurley-logo {
     width: 106px;
-    background-image: url("../img/hurley-logo-light.jpg");
+    background-image: url("../img/logos/hurley-logo-light.jpg");
     background-size: 54px;
     background-repeat: no-repeat;
     background-position: center; }
     nav .hurley-logo:hover {
-      background-image: url("../img/hurley-logo.jpg"); }
+      background-image: url("../img/logos/hurley-logo.jpg"); }
   nav .converse-logo {
     width: 106px;
-    background-image: url("../img/converse-logo-light.png");
+    background-image: url("../img/logos/converse-logo-light.png");
     background-size: 62px;
     background-repeat: no-repeat;
     background-position: center; }
     nav .converse-logo:hover {
-      background-image: url("../img/converse-logo.png"); }
+      background-image: url("../img/logos/converse-logo.png"); }
 
 body {
   padding: 0;
@@ -146,6 +146,17 @@ footer {
   position: absolute;
   padding: 50px; }
 
+.main-billboard {
+  display: flex;
+  flex-wrap: wrap; }
+  .main-billboard .billboard-element {
+    width: 50%; }
+    .main-billboard .billboard-element img {
+      width: 100%;
+      height: auto; }
+  .main-billboard .billboard-last {
+    margin-top: -19%; }
+
 .fa {
   position: relative;
   height: 24px;
@@ -163,5 +174,11 @@ footer {
 
 .text-dark {
   color: #999; }
+
+@media (max-width: 800px) {
+  .main-billboard .billboard-element {
+    width: 100%; }
+  .main-billboard .billboard-last {
+    margin: 0; } }
 
 /*# sourceMappingURL=main.css.map */
