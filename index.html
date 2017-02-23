@@ -7,67 +7,89 @@
         <nav>
             <div class="nav-top">
                 <ul class="company-nav">
-                    <li>Nike+</li>
-                    <li class="jumpman-logo"></li>
-                    <li class="hurley-logo"></li>
-                    <li class="converse-logo"></li>
+                    <li><a class="nike-plus-logo">Nike+</a></li>
+                    <a><li class="jumpman-logo"></li></a>
+                    <a><li class="hurley-logo"></li></a>
+                    <a><li class="converse-logo"></li></a>
                 </ul>
                 <ul>
-                    <li>Join/Log in to Nike+ Account</li>
-                    <li>Help</li>
-                    <li>Shopping Cart</li>
-                    <span><img src="./img/us_sml.png" class="flag"></span>
+                    <li class="nav-top-padding"><a>Join/Log in to Nike+ Account</a></li>
+                    <li class="nav-top-padding"><a>Help</a></li>
+                    <li><a><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                    <li><a class="flag-link"><img src="./img/us_sml.png" class="flag-icon"></a></li>
                 </ul>
             </div>
-            <div>
+            <div class="nav-bottom">
                 <div class="nike-logo">
                 </div>
-                <ul>
-                    <li>men</li>
-                    <li>women</li>
-                    <li>boys</li>
-                    <li>girls</li>
-                    <li>customize</li>
+                <ul class="nav-categories">
+                    <li><a>men</a></li>
+                    <li><a>women</a></li>
+                    <li><a>boys</a></li>
+                    <li><a>girls</a></li>
+                    <li><a>customize</a></li>
                 </ul>
-                <div>
-                    Search
+                <div class="search-box">
+                    <input type="search" placeholder="Search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
                 </div>
             </div>
         </nav>
 
         <main>
+            <section class="carousel">
+
+            </section>
             <section>
+                <div class="banner-element">
+                    <h2>Nike Lunarepic <br> Flyknit 2</h2>
+                    <p>Enjoy our smoothest ride with our most comfortable fit.</p>
+                    <p><a>Shop Women's</a></p>
+                    <p><a>Shop Men's</a></p>
+                </div>
                 <video class="cover-img" preload="true" loop="loop" muted="true" autoplay>
-                    <source src="img/nike_video.mp4" type="video/mp4">
+                    <source src="img/mov/nike_video.mp4" type="video/mp4">
                 </video>
             </section>
-            <section>
-                <div class="banner-element">
-                    <h2>A Gift from the heart</h2>
-                    <p>It’s never too late to give the perfect
-                        gift of a Nike Digital Gift Card.</p>
-                    <button>Email a Gift Card</button>
-                    <button>Ship a Gift Card</button>
+
+            <section class="main-billboard">
+                <div class="billboard-element">
+                    <div class="billboard-text city">
+                        <h2>Nike City Collection</h2>
+                        <p>Inspired by those who <br> run their city.</p>
+                        <p><a>Shop Women's</a></p>
+                        <p><a>Shop Men's</a></p>
+                    </div>
+                    <img src="img/main/nike-city.jpg">
                 </div>
-                <img src="img/nike_top.jpg" class="cover-img">
-            </section>
-            <section>
-                <div class="banner-element">
-                    <h2>Nike Tech Kit: Engineering Warmth</h2>
-                    <p>Defy traditional comfort with warm, engineered knit and breathable mesh for your everyday hustle.</p>
-                    <button>Shop Men's</button>
-                    <button>Shop Women's</button>
+                <div class="billboard-element">
+                    <div class="billboard-text watch">
+                        <h2>Apple Watch <br> Nike+</h2>
+                        <p>Your perfect <br> running partner.</p>
+                        <p><a>Shop Now</a></p>
+                        <p><a>Learn More</a></p>
+                    </div>
+                    <img src="img/main/nike-watch.jpg">
                 </div>
-                <img src="./img/nike_bottom.jpg" class="cover-img">
+                <div class="billboard-element">
+                    <div class="billboard-text run-child">
+                        <h2>New Running <br> Essentials</h2>
+                        <p>Made for Young Athletes</p>
+                        <p><a>Shop Girls'</a></p>
+                        <p><a>Shop Boys'</a></p>
+                    </div>
+                    <img src="img/main/nike-run-child.jpg">
+                </div>
+                <div class="billboard-element billboard-last">
+                    <div class="billboard-text run-adult">
+                        <h2>Get Out. Run Out <br> Bliss Out.</h2>
+                        <p>Our favorite running gear <br> for zero distractions</p>
+                        <p><a>Shop The Collection</a></p>
+                        <p><a>View Styleguide</a></p>
+                    </div>
+                    <img src="img/main/nike-run-adult.jpg">
+                </div>
             </section>
-            <!--<section class="gifts">-->
-                <!--<div class="banner-element">-->
-                    <!--<h2>Give them what they love</h2>-->
-                    <!--<p>This Valentine's Day, skip the candy hearts and chocolates. Give Nike</p>-->
-                    <!--<button>Shop Gifts > </button>-->
-                <!--</div>-->
-                <!--<img src="./img/nike-shoelace.jpg" class="cover-img">-->
-            <!--</section>-->
         </main>
 
         <footer>

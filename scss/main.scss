@@ -1,6 +1,8 @@
 $bg-dark : #191919;
 $border-gray : #E5E5E5;
 $text-gray: #8D8D8D;
+$text-dark: #111;
+$carousel-bg: #F7F7F7;
 
 
 $a-tags: 'a, a:active, a:hover, a:visited';
@@ -11,12 +13,11 @@ $footer-font-lrg: 14px;
 
 * {
   box-sizing: border-box;
-  font-family: Helvetica;
+  font-family: Helvetica, Arial, sans-serif;
+  font-stretch: semi-condensed;
 }
 
-main {
-  padding-top: 108px;
-}
+
 
 nav {
   background-color: white;
@@ -41,6 +42,7 @@ nav {
     list-style: none;
     li{
       display: inline-flex;
+      align-items: center;
     }
   }
 
@@ -62,58 +64,271 @@ nav {
   }
 
   .nav-top {
+    align-items: center;
+    justify-content: space-between;
+
+
+
+    .nav-top-padding {
+      font-size: 12px;
+      color: $text-gray;
+      padding: 0 12px;
+
+      &:hover {
+        color: $text-dark;
+      }
+    }
+    .flag-link {
+      padding: 0 19px;
+      .flag-icon {
+        height: 10px;
+        width: 14px;
+      }
+    }
+  }
+
+  .nav-bottom {
+    padding: 0 32px 0 31px;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
   }
 
   .nike-logo {
-    width: 58px;
+    min-width: 58px;
     height: 68px;
-    background-image: url("../img/nike-icon.png");
+    background-image: url("../img/logos/nike-icon.png");
     background-size: cover;
+  }
+
+  .nike-plus-logo {
+    font-size: 12px;
+    color: $text-gray;
+    padding: 0 12px;
+
+    &:hover {
+      color: $text-dark;
+    }
   }
 
   .jumpman-logo {
     width:79px;
-    background-image: url("../img/jumpman-logo.png");
+    background-image: url("../img/logos/jumpman-logo.png");
     background-size: 21px 21px;
     background-repeat: no-repeat;
     background-position: center;
     &:hover {
-      background-image: url("../img/jumpman-logo-red.png");
+      background-image: url("../img/logos/jumpman-logo-red.png");
     }
   }
 
   .hurley-logo {
     width: 106px;
-    background-image: url("../img/hurley-logo-light.jpg");
+    background-image: url("../img/logos/hurley-logo-light.jpg");
     background-size: 54px;
     background-repeat: no-repeat;
     background-position: center;
 
     &:hover {
-      background-image: url("../img/hurley-logo.jpg");
+      background-image: url("../img/logos/hurley-logo.jpg");
     }
   }
 
   .converse-logo {
     width: 106px;
-    background-image: url("../img/converse-logo-light.png");
+    background-image: url("../img/logos/converse-logo-light.png");
     background-size: 62px;
     background-repeat: no-repeat;
     background-position: center;
 
     &:hover {
-      background-image: url("../img/converse-logo.png");
+      background-image: url("../img/logos/converse-logo.png");
     }
   }
 
+  .nav-categories {
+    text-align: center;
+
+    li {
+      padding: 0 20px 0 20px;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 600;
+
+      a {
+        line-height: 66px;
+      }
+
+      &:hover {
+        border-bottom: 2px solid black;
+      }
+    }
+  }
+
+  .search-box {
+    position: relative;
+    float:right;
+
+    input {
+      height: 40px;
+      width: 194px;
+      margin-left: 30px;
+      border: 1px solid $border-gray;
+      border-radius: 5px;
+      position: relative;
+      font-size: 13px;
+      padding: 0 31px 2px 41px;
+      overflow: hidden;
+
+      -webkit-transition: width .25s ease-in-out, margin-left .25s ease-in-out;
+      -moz-transition: width .25s ease-in-out, margin-left .25s ease-in-out;
+      -o-transition: width .25s ease-in-out, margin-left .25s ease-in-out;
+      transition: width 0.25s ease-in-out, margin-left 0.25s ease-in-out;
+
+      transition-delay: 0.25s;
+
+      &:focus {
+        transition-delay: 0s;
+        width:224px;
+        margin-left:0;
+        border-color:$text-gray;
+        outline: none;
+      }
+
+      &:focus ~ i.fa-search {
+        transition-delay: 0s;
+        left: 13px;
+      }
+
+    }
+
+  }
+
+
 }
-
-
 
 body {
   padding: 0;
   margin: 0;
+}
+
+main {
+  padding-top: 108px;
+
+  .carousel {
+    height: 60px;
+    background-color: $carousel-bg;
+  }
+
+
+  section {
+    position: relative;
+  }
+
+  .banner-element {
+    z-index: 100;
+    width: 267px;
+    position: absolute;
+    left:3.333333%;
+    top: 8.876298%;
+
+    color: black;
+
+    h2 {
+      text-transform: uppercase;
+      font-size: 35px;
+    }
+
+    p {
+      font-size: 16px;
+      font-stretch: normal;
+    }
+
+    a {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold;
+      &:hover {
+        border-bottom: 1px solid black;
+      }
+    }
+
+  }
+  .main-billboard {
+    display: flex;
+    flex-wrap: wrap;
+
+    .billboard-element {
+      position: relative;
+      width: 50%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .billboard-text {
+        width: 180px;
+        position: absolute;
+
+        h2 {
+          text-transform: uppercase;
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 14px;
+          font-stretch: normal;
+        }
+
+        a {
+          font-size: 14px;
+          font-weight: bold;
+          text-transform: uppercase;
+          &:hover {
+            border-bottom: 1px solid black;
+          }
+        }
+
+      }
+
+      .city {
+        color: white;
+        top: 3.333%;
+        left: 3.333%;
+
+        a:hover {
+          border-color: white;
+        }
+      }
+
+      .watch {
+        right: 3.333%;
+        bottom: 50%;
+        text-align: right;
+      }
+
+      .run-child {
+        top: 3.333%;
+        left: 3.333%;
+      }
+
+      .run-adult {
+        color: white;
+        bottom: 3.333%;
+        right: 3.333%;
+        text-align: right;
+
+        a:hover {
+          border-color: white;
+        }
+      }
+    }
+
+    .billboard-last {
+      margin-top: -19%;
+    }
+
+  }
 }
 
 footer {
@@ -147,6 +362,9 @@ footer {
     list-style: none;
     li {
       height: 28px;
+      span {
+        padding: 0 5px;
+      }
     }
   }
 
@@ -219,15 +437,18 @@ footer {
   z-index: -1;
 }
 
-.banner-element {
-  width: 267px;
-  position: absolute;
-  padding: 50px;
+
+
+
+
+
+
+.text-dark {
+  color:#999;
 }
 
 
-
-
+//FONT AWESOME OVERRIDES
 .fa {
   position: relative;
   height: 24px;
@@ -248,7 +469,47 @@ footer {
   }
 }
 
+.fa-search {
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
 
-.text-dark {
-  color:#999;
+  -webkit-transition: left .25s ease-in-out;
+  -moz-transition: left .25s ease-in-out;
+  -o-transition: left .25s ease-in-out;
+  transition: left 0.25s ease-in-out;
+  transition-delay: 0.25s;
 }
+
+.fa-shopping-cart {
+  background-color: white;
+  color: $text-gray;
+
+  &:hover {
+    color: $text-dark;
+  }
+}
+
+
+a {
+  &:hover {
+    cursor: pointer;
+    z-index: 100;
+  }
+}
+
+//RESPONSIVE STYLES
+@media (max-width: 800px) {
+  .main-billboard {
+    .billboard-element {
+      width:100%;
+    }
+
+    .billboard-last {
+      margin:0;
+    }
+  }
+}
+  
