@@ -1,9 +1,7 @@
 * {
   box-sizing: border-box;
-  font-family: Helvetica, Arial, sans-serif; }
-
-main {
-  padding-top: 108px; }
+  font-family: Helvetica, Arial, sans-serif;
+  font-stretch: semi-condensed; }
 
 nav {
   background-color: white;
@@ -133,6 +131,79 @@ body {
   padding: 0;
   margin: 0; }
 
+main {
+  padding-top: 108px; }
+  main .carousel {
+    height: 60px;
+    background-color: #F7F7F7; }
+  main section {
+    position: relative; }
+  main .banner-element {
+    z-index: 100;
+    width: 267px;
+    position: absolute;
+    left: 3.333333%;
+    top: 8.876298%;
+    color: black; }
+    main .banner-element h2 {
+      text-transform: uppercase;
+      font-size: 35px; }
+    main .banner-element p {
+      font-size: 16px;
+      font-stretch: normal; }
+    main .banner-element a {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold; }
+      main .banner-element a:hover {
+        border-bottom: 1px solid black; }
+  main .main-billboard {
+    display: flex;
+    flex-wrap: wrap; }
+    main .main-billboard .billboard-element {
+      position: relative;
+      width: 50%; }
+      main .main-billboard .billboard-element img {
+        width: 100%;
+        height: auto; }
+      main .main-billboard .billboard-element .billboard-text {
+        width: 180px;
+        position: absolute; }
+        main .main-billboard .billboard-element .billboard-text h2 {
+          text-transform: uppercase;
+          font-size: 20px; }
+        main .main-billboard .billboard-element .billboard-text p {
+          font-size: 14px;
+          font-stretch: normal; }
+        main .main-billboard .billboard-element .billboard-text a {
+          font-size: 14px;
+          font-weight: bold;
+          text-transform: uppercase; }
+          main .main-billboard .billboard-element .billboard-text a:hover {
+            border-bottom: 1px solid black; }
+      main .main-billboard .billboard-element .city {
+        color: white;
+        top: 3.333%;
+        left: 3.333%; }
+        main .main-billboard .billboard-element .city a:hover {
+          border-color: white; }
+      main .main-billboard .billboard-element .watch {
+        right: 3.333%;
+        bottom: 50%;
+        text-align: right; }
+      main .main-billboard .billboard-element .run-child {
+        top: 3.333%;
+        left: 3.333%; }
+      main .main-billboard .billboard-element .run-adult {
+        color: white;
+        bottom: 3.333%;
+        right: 3.333%;
+        text-align: right; }
+        main .main-billboard .billboard-element .run-adult a:hover {
+          border-color: white; }
+    main .main-billboard .billboard-last {
+      margin-top: -19%; }
+
 footer {
   background-color: #191919;
   color: white; }
@@ -157,6 +228,8 @@ footer {
     list-style: none; }
     footer .social li {
       height: 28px; }
+      footer .social li span {
+        padding: 0 5px; }
   footer .footer-bottom {
     display: inline-block;
     width: 100%;
@@ -203,22 +276,6 @@ footer {
   height: auto;
   z-index: -1; }
 
-.banner-element {
-  width: 267px;
-  position: absolute;
-  padding: 50px; }
-
-.main-billboard {
-  display: flex;
-  flex-wrap: wrap; }
-  .main-billboard .billboard-element {
-    width: 50%; }
-    .main-billboard .billboard-element img {
-      width: 100%;
-      height: auto; }
-  .main-billboard .billboard-last {
-    margin-top: -19%; }
-
 .text-dark {
   color: #999; }
 
@@ -256,7 +313,8 @@ footer {
     color: #111; }
 
 a:hover {
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 100; }
 
 @media (max-width: 800px) {
   .main-billboard .billboard-element {
