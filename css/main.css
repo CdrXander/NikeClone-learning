@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: Helvetica; }
+  font-family: Helvetica, Arial, sans-serif; }
 
 main {
   padding-top: 108px; }
@@ -23,7 +23,8 @@ nav {
     margin: 0;
     list-style: none; }
     nav ul li {
-      display: inline-flex; }
+      display: inline-flex;
+      align-items: center; }
   nav .company-nav {
     line-height: 39px;
     margin: 0;
@@ -36,12 +37,35 @@ nav {
       padding-left: 29px;
       padding-right: 29px; }
   nav .nav-top {
+    align-items: center;
+    justify-content: space-between; }
+    nav .nav-top .nav-top-padding {
+      font-size: 12px;
+      color: #8D8D8D;
+      padding: 0 12px; }
+      nav .nav-top .nav-top-padding:hover {
+        color: #111; }
+    nav .nav-top .flag-link {
+      padding: 0 19px; }
+      nav .nav-top .flag-link .flag-icon {
+        height: 10px;
+        width: 14px; }
+  nav .nav-bottom {
+    padding: 0 32px 0 31px;
+    display: flex;
+    align-items: center;
     justify-content: space-between; }
   nav .nike-logo {
-    width: 58px;
+    min-width: 58px;
     height: 68px;
     background-image: url("../img/logos/nike-icon.png");
     background-size: cover; }
+  nav .nike-plus-logo {
+    font-size: 12px;
+    color: #8D8D8D;
+    padding: 0 12px; }
+    nav .nike-plus-logo:hover {
+      color: #111; }
   nav .jumpman-logo {
     width: 79px;
     background-image: url("../img/logos/jumpman-logo.png");
@@ -66,6 +90,44 @@ nav {
     background-position: center; }
     nav .converse-logo:hover {
       background-image: url("../img/logos/converse-logo.png"); }
+  nav .nav-categories {
+    text-align: center; }
+    nav .nav-categories li {
+      padding: 0 20px 0 20px;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 600; }
+      nav .nav-categories li a {
+        line-height: 66px; }
+      nav .nav-categories li:hover {
+        border-bottom: 2px solid black; }
+  nav .search-box {
+    position: relative;
+    float: right; }
+    nav .search-box input {
+      height: 40px;
+      width: 194px;
+      margin-left: 30px;
+      border: 1px solid #E5E5E5;
+      border-radius: 5px;
+      position: relative;
+      font-size: 13px;
+      padding: 0 31px 2px 41px;
+      overflow: hidden;
+      -webkit-transition: width .25s ease-in-out, margin-left .25s ease-in-out;
+      -moz-transition: width .25s ease-in-out, margin-left .25s ease-in-out;
+      -o-transition: width .25s ease-in-out, margin-left .25s ease-in-out;
+      transition: width 0.25s ease-in-out, margin-left 0.25s ease-in-out;
+      transition-delay: 0.25s; }
+      nav .search-box input:focus {
+        transition-delay: 0s;
+        width: 224px;
+        margin-left: 0;
+        border-color: #8D8D8D;
+        outline: none; }
+      nav .search-box input:focus ~ i.fa-search {
+        transition-delay: 0s;
+        left: 13px; }
 
 body {
   padding: 0;
@@ -157,6 +219,9 @@ footer {
   .main-billboard .billboard-last {
     margin-top: -19%; }
 
+.text-dark {
+  color: #999; }
+
 .fa {
   position: relative;
   height: 24px;
@@ -172,8 +237,26 @@ footer {
   .fa:hover {
     background-color: white; }
 
-.text-dark {
-  color: #999; }
+.fa-search {
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+  -webkit-transition: left .25s ease-in-out;
+  -moz-transition: left .25s ease-in-out;
+  -o-transition: left .25s ease-in-out;
+  transition: left 0.25s ease-in-out;
+  transition-delay: 0.25s; }
+
+.fa-shopping-cart {
+  background-color: white;
+  color: #8D8D8D; }
+  .fa-shopping-cart:hover {
+    color: #111; }
+
+a:hover {
+  cursor: pointer; }
 
 @media (max-width: 800px) {
   .main-billboard .billboard-element {
