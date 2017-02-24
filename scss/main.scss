@@ -629,7 +629,7 @@ a {
   }
 }
 
-@media (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   main {
     .main-billboard {
       .billboard-element {
