@@ -391,7 +391,7 @@ a:hover {
       border-color: white; }
   main .main-billboard .billboard-last {
     margin: 0; } }
-@media (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   main .main-billboard .billboard-element .billboard-text .billboard-subtitle {
     display: none; } }
 
