@@ -89,7 +89,8 @@ nav {
     nav .converse-logo:hover {
       background-image: url("../img/logos/converse-logo.png"); }
   nav .nav-categories {
-    text-align: center; }
+    text-align: center;
+    padding-left: 166px; }
     nav .nav-categories li {
       padding: 0 20px 0 20px;
       text-transform: uppercase;
@@ -135,7 +136,29 @@ main {
   padding-top: 108px; }
   main .carousel {
     height: 60px;
-    background-color: #F7F7F7; }
+    background-color: #F7F7F7;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    main .carousel .carousel-banner-box {
+      width: 400px;
+      margin: 0 120px 0 120px; }
+    main .carousel .carousel-item {
+      display: inline; }
+      main .carousel .carousel-item h2 {
+        display: inline;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 800; }
+      main .carousel .carousel-item span {
+        font-size: 14px; }
+      main .carousel .carousel-item a {
+        font-size: 12px;
+        border-bottom: 1px solid black; }
+        main .carousel .carousel-item a:hover {
+          color: red;
+          border-color: red; }
   main section {
     position: relative; }
   main .banner-element {
@@ -172,7 +195,7 @@ main {
         main .main-billboard .billboard-element .billboard-text h2 {
           text-transform: uppercase;
           font-size: 20px; }
-        main .main-billboard .billboard-element .billboard-text p {
+        main .main-billboard .billboard-element .billboard-text .billboard-subtitle {
           font-size: 14px;
           font-stretch: normal; }
         main .main-billboard .billboard-element .billboard-text a {
@@ -312,14 +335,64 @@ footer {
   .fa-shopping-cart:hover {
     color: #111; }
 
+.fa-chevron-left {
+  background-color: #F7F7F7; }
+  .fa-chevron-left:hover {
+    background-color: #F7F7F7; }
+
+.fa-chevron-right {
+  background-color: #F7F7F7; }
+  .fa-chevron-right:hover {
+    background-color: #F7F7F7; }
+
 a:hover {
   cursor: pointer;
   z-index: 100; }
 
-@media (max-width: 800px) {
-  .main-billboard .billboard-element {
+@media (max-width: 930px) {
+  nav .nav-categories {
+    padding-left: 0; } }
+@media (max-width: 801px) {
+  main .banner-element {
+    position: absolute;
+    left: 3.333333%;
+    top: 8.876298%;
+    color: black; }
+    main .banner-element h2 {
+      text-transform: uppercase;
+      font-size: 24px; }
+    main .banner-element .banner-subtitle {
+      display: none; }
+    main .banner-element a {
+      text-transform: uppercase;
+      font-size: 10px; }
+      main .banner-element a:hover {
+        border-bottom: 1px solid black; }
+  main .main-billboard .billboard-element {
     width: 100%; }
-  .main-billboard .billboard-last {
+    main .main-billboard .billboard-element .billboard-text {
+      position: absolute; }
+      main .main-billboard .billboard-element .billboard-text h2 {
+        text-transform: uppercase;
+        font-size: 14px; }
+      main .main-billboard .billboard-element .billboard-text .billboard-subtitle {
+        font-size: 12px; }
+      main .main-billboard .billboard-element .billboard-text a {
+        font-size: 10px;
+        font-weight: bold;
+        text-transform: uppercase; }
+        main .main-billboard .billboard-element .billboard-text a:hover {
+          border-bottom: 1px solid black; }
+    main .main-billboard .billboard-element .watch {
+      bottom: 3.333%; }
+    main .main-billboard .billboard-element .city a:hover {
+      border-color: white; }
+    main .main-billboard .billboard-element .run-adult a:hover {
+      border-color: white; }
+  main .main-billboard .billboard-last {
     margin: 0; } }
+@media (max-width: 500px) {
+  main .main-billboard .billboard-element .billboard-text .billboard-subtitle {
+    display: none; } }
 
 /*# sourceMappingURL=main.css.map */
